@@ -53,7 +53,7 @@
                 <geom type="box" size="0.02 0.1 0.01" pos="0 -0.08 0" mass="1"/>
             </body>
 
-            <!-- Head and Neck -->
+            <!-- Head and Neck
             <body name="neck" pos="0 0.15 0">
                 <joint name="neck_joint" type="hinge" axis="0 0 1" range="-45 45"/>
                 <geom type="box" size="0.05 0.1 0.1" pos="0 0.1 0" mass="1"/>
@@ -61,7 +61,7 @@
                     <joint name="head_joint" type="hinge" axis="1 0 0" range="-45 45"/>
                     <geom type="box" size="0.1 0.05 0.08" pos="0 0 0" mass="1"/>
                 </body>
-            </body>
+            </body> -->
         </body>
         <geom type="plane" size="20 20 0.1" material="floor_mat"/>
     </worldbody>

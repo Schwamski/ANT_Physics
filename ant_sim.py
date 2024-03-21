@@ -28,9 +28,6 @@ def simple_limb_movement_controller(model, data, amplitude=0.2, frequency=1.0):
 def observe_state(model, data):
     # Joint angles
     joint_angles = data.qpos[:model.nq].copy()
-
-    print('JOINT ANGLES')
-    print(joint_angles)
     
     # Body orientation
     if model.nq > 3:  # Assuming the orientation is represented by a quaternion
@@ -38,15 +35,9 @@ def observe_state(model, data):
         root_orientation_euler = quat_to_euler(root_quat)
     else:
         root_orientation_euler = np.zeros(3)
-    
-    print('ORIENTATION')
-    print(root_orientation_euler)
 
     # body position
     body_position = data.qpos[:3].copy()
-
-    print('BODY POSITION')
-    print(body_position)
     
     return np.concatenate([joint_angles, root_orientation_euler, body_position])
 
